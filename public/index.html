@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/index.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+      <div class="game-container">
+        <h1 class="wordees-title">Wordees</h1>
+        <div class="player-id-box"></div>
+    <!--<form id="wordees">-->
+        <form method="get" id="usernameDisplay" onsubmit="return false">
+          <label class="username-tag">Username</label>
+          <input class="username-input" type="text" placeholder="Enter player name here" id="username-input">
+          <input class="username-button" type="submit" value="Connect!" id="connect">
+        </form>
+    <!--</form>-->
+    <!-- Test boxes for possible words-->
+    <!--Test letter array [e, a, m, t, r, d, g]-->
+        <div class="game-board-container">
+          <div class="game-board">
+            <div class="word-container"></div>
+            
+            <div class="guessing-line">
+              <div class="word-guess-container">
+                <div class="word-guessed"></div>
+              </div>
+              <button onclick="submitGuess()" class="submit-guess">Submit</button>
+              <button onclick="resetGuess()" class="reset-guess">Reset</button>
+              <button onclick="doneButton()" class="done-button">Done</button>
+            </div>
+            
+            <div class="letter-container">
+              <div onclick="addLetter(0)" class="letter-box">A</div>
+              <div onclick="addLetter(1)" class="letter-box">M</div>
+              <div onclick="addLetter(2)" class="letter-box">T</div>
+              <div onclick="addLetter(3)" class="letter-box">R</div>
+              <div onclick="addLetter(4)" class="letter-box">D</div>
+              <div onclick="addLetter(5)" class="letter-box">G</div>
+              <div onclick="addLetter(6)" class="letter-box">E</div>
+            </div>
+          </div>
+          </div>
+        </div>
+  
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="index.js"></script>
+    </body>
+  </html>`
