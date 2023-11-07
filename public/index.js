@@ -1,4 +1,4 @@
-const socket = io();
+//const socket = io();
 const game = document.querySelector('.game-board')
 const wordContainer = document.querySelector('.word-container')
 const wordBox = document.querySelector('.answer-box')
