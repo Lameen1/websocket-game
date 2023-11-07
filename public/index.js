@@ -13,11 +13,11 @@ const guessString = document.querySelector('.word-guessed')
 //Hide username input when user enter username
 //keep track of username in backend
 const possWords = [
-  "RAT",
-  "MADE",
-  "GAME",
-  "DRAG",
-  "GAT"
+  "ARE",
+  "RED",
+  "EAR",
+  "READ",
+  "DEAR"
 ]
 
 const themeSong = new Audio("assets/theme-song.mp3")
