@@ -1,4 +1,4 @@
-const socket = io();
+// const socket = io();
 const game = document.querySelector('.game-board')
 const wordContainer = document.querySelector('.word-container')
 const wordBox = document.querySelector('.answer-box')
@@ -67,16 +67,17 @@ function addLetter(e){
 function submitGuess(){
   for (i = 0; i < possWords.length; i++){
     if (possWords[i] == guessString.innerText){
+      console.log("nutz")
       let currentNode = wordContainer.childNodes[i]
       resetGuess()
       for (e = 0; e < currentNode.childNodes.length; e++){
         currentNode.childNodes[e].classList.remove("hidden-answer-box")
       } 
-    } else{
-      resetGuess()
     }
   }
-}
+  return resetGuess()
+} 
+
 function resetGuess(){
   guessString.innerText = emptyString
   clickEffect.play()

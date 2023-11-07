@@ -192,7 +192,6 @@ body{
   }
   .show-game{
     margin-bottom: 5px;
-    padding: 5px;
   }
   .answer-box{
     height: 50px;
@@ -237,13 +236,19 @@ body{
     width: 120px;
   }
   .submit-guess{
-    padding: 5px;
+    font-size: 11px;
+    height: 52px;
+    width: 52px;
   }
   .reset-guess{
-    padding: 8px;
+    font-size: 11px;
+    height: 52px;
+    width: 52px;
   }
   .done-button{
-    padding: 8px;
+    font-size: 11px;
+    height: 52px;
+    width: 52px;
   }
   .letter-box{
     height: 36px;
