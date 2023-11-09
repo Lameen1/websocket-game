@@ -14,12 +14,45 @@ body{
   font-size: 50px;
   color:rgb(255, 231, 198);
 }
+/* Wordees game info css */
+.stats-timer-info-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  display: none;
+}
 .player-id-box{
   font-family: 'Rubik', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
-  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(255, 231, 198);;
 }
+.wordees-game-timer{
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+.wordees-game-score{
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(173, 95, 21);
+}
+.answer-feedback{
+  display:  none;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+  color:rgb(124, 7, 7);
+}
+.show-wordee-info{
+  display: flex;
+}
+/**/
+
 .username-tag{
   font-family: 'Aclonica', sans-serif;
   font-size: 25px;
@@ -53,6 +86,7 @@ body{
 
 .game-board{
   display: none;
+  margin-top: 10px;
 }
 .show-game{
   display: flex;
@@ -257,6 +291,9 @@ body{
   }
 }
 @media screen and (max-width:  325px){
+  .stats-timer-info-container{
+    gap: 20px;
+  }
   .submit-guess{
     font-size: 11px;
     height: 52px;
