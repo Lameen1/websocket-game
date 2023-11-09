@@ -16,11 +16,12 @@ const ansFeedback = document.querySelector('.answer-feedback')
 //Hide username input when user enter username
 //keep track of username in backend
 const possWords = [
-  "ARE",
-  "RED",
-  "EAR",
-  "READ",
-  "DEAR"
+  "ACE",
+  "CADE",
+  "DECK",
+  "KADE",
+  "CAKE",
+  "CAKED"
 ]
 
 const themeSong = new Audio("assets/theme-song.mp3")
