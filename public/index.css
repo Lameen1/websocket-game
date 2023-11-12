@@ -2,10 +2,10 @@ body{
   background-image: url('assets/background-img.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
 }
 .game-container{
-  height: 100%;
+  height: 80%;
   width: 100%;
 }
 .wordees-title{
@@ -31,8 +31,14 @@ body{
 }
 .wordees-game-timer{
   font-family: 'Rubik', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+.wordees-game-timer span {
+  display: flex;
+  justify-content: center;
 }
 .wordees-game-score{
   font-family: 'Rubik', sans-serif;
@@ -206,24 +212,22 @@ body{
 
 /* Sizing Screen and mobile friendly */
 
-@media screen and (max-width: 1400px){
-  body{
-    height: 1200px;
-  }
+@media screen and (min-width: 1400px){
+
 }
 
 @media screen and (max-width: 800px){
-  body{
-    height: 900px;
-  }
+
 }
 @media screen and (max-width:  450px){
   body {
     background-size: cover;
-    height: 650px;
     width: 100%;
     margin: 0;
     padding: 10px;
+  }
+  .stats-timer-info-container{
+    gap: 12px;
   }
   .show-game{
     margin-bottom: 5px;
@@ -233,12 +237,21 @@ body{
     width: 50px;
   }
   .submit-guess{
+    font-size: 11px;
+    height: 52px;
+    width: 52px;
     padding: 5px;
   }
   .reset-guess{
+    font-size: 11px;
+    height: 52px;
+    width: 52px;
     padding: 8px;
   }
   .done-button{
+    font-size: 11px;
+    height: 52px;
+    width: 52px;
     padding: 8px;
   }
   .letter-box{
@@ -249,9 +262,11 @@ body{
 @media screen and (max-width:  400px){
   body {
     background-size: cover;
-    height: 700px;
     width: 100%;
     overflow-x: hidden;
+  }
+  .stats-timer-info-container{
+    gap: 12px;
   }
   .show-game{
     margin-bottom: 5px;
@@ -270,45 +285,12 @@ body{
     height: 50px;
     width: 120px;
   }
-  .submit-guess{
-    font-size: 11px;
-    height: 52px;
-    width: 52px;
-  }
-  .reset-guess{
-    font-size: 11px;
-    height: 52px;
-    width: 52px;
-  }
-  .done-button{
-    font-size: 11px;
-    height: 52px;
-    width: 52px;
-  }
   .letter-box{
     height: 36px;
     width: 36px;
   }
 }
 @media screen and (max-width:  325px){
-  .stats-timer-info-container{
-    gap: 20px;
-  }
-  .submit-guess{
-    font-size: 11px;
-    height: 52px;
-    width: 52px;
-  }
-  .reset-guess{
-    font-size: 11px;
-    height: 52px;
-    width: 52px;
-  }
-  .done-button{
-    font-size: 11px;
-    height: 52px;
-    width: 52px;
-  }
   .letter-box{
     height: 36px;
     width: 36px;

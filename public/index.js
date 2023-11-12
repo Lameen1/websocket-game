@@ -1,4 +1,4 @@
-
+const theBody = document.querySelector('#the-body')
 const game = document.querySelector('.game-board')
 const wordContainer = document.querySelector('.word-container')
 const wordBox = document.querySelector('.answer-box')
@@ -16,12 +16,13 @@ const ansFeedback = document.querySelector('.answer-feedback')
 //Hide username input when user enter username
 //keep track of username in backend
 const possWords = [
-  "ACE",
-  "CADE",
-  "DECK",
-  "KADE",
-  "CAKE",
-  "CAKED"
+  "CAR",
+  "ART",
+  "ACT",
+  "COAT",
+  "TACO",
+  "CART",
+  "ACTOR"
 ]
 
 const themeSong = new Audio("assets/theme-song.mp3")
@@ -58,6 +59,7 @@ function connectingUser(){
       game.classList.add('show-game')
       wordeeInfo.classList.add('show-wordee-info')
       ansFeedback.classList.add('show-wordee-info')
+      theBody.style.height = "100%"
       runTimer()
   }})
 }
@@ -82,7 +84,6 @@ function gameTimer(duration, display){
 
       if (--timer < 0) {
           display.textContent = "00:00";
-          alert('times up')
           clearInterval()
       }
 
