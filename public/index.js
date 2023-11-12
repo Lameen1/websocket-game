@@ -150,7 +150,6 @@ function addPoints (points){
 }
 function resetGuess(){
   guessString.innerText = emptyString
-  clickEffect.play()
 }
 
 
