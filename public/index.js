@@ -26,9 +26,7 @@ const possWords = [
   "ABLE",
   "BALE",
   "BAGEL",
-  "GABLE",
-
-
+  "GABLE"
 ]
 
 const themeSong = new Audio("assets/theme-song.mp3")
