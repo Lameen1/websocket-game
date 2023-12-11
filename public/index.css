@@ -7,6 +7,7 @@ body{
 .game-container{
   height: 80%;
   width: 100%;
+  
 }
 .wordees-title{
   font-family: 'Aclonica', sans-serif;
@@ -325,6 +326,17 @@ body{
 .leadb-player-score{
   margin-right: 10px;
   color:rgb(23, 96, 121) ;
+}
+
+/* Sign up styling */
+.sign-up-container{
+  background-color: red;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
 }
 
 
