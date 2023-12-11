@@ -25,6 +25,7 @@ const possWords = [
   "LAG",
   "ABLE",
   "BALE",
+  "BAGEL",
   "GABLE",
 
 
