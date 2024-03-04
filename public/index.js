@@ -7,11 +7,14 @@ const usernameInput= document.getElementById('username-input')
 const usernameConnectButton= document.getElementById('connect')
 const usernameDisplay= document.getElementById('usernameDisplay')
 const nameBox= document.querySelector(".player-id-box")
+const letterContainer = document.querySelector(".letter-container")
 const letterBox = document.querySelectorAll('.letter-box')
 const guessString = document.querySelector('.word-guessed')
 const wordeeInfo = document.querySelector('.stats-timer-info-container')
 const scoreNumber = document.querySelector('.score-number')
 const ansFeedback = document.querySelector('.answer-feedback')
+const submitButton = document.querySelector('.submit-guess')
+const resetButton = document.querySelector('.reset-guess')
 
 //Hide username input when user enter username
 //keep track of username in backend
@@ -88,6 +91,7 @@ function gameTimer(duration, display){
 
       if (--timer < 0) {
           display.textContent = "00:00";
+          disableAllButtons()
           clearInterval()
       }
 
@@ -110,6 +114,7 @@ function addLetter(e){
   const letterGuess = letterBox[e].innerText
   guessString.innerText = guessString.innerText + letterGuess
   
+  disableLetter(e)
   clickEffect.play()
   clearFeedback()
 }
@@ -154,6 +159,7 @@ function addPoints (points){
 }
 function resetGuess(){
   guessString.innerText = emptyString
+  enableLetter()
 }
 
 
@@ -176,4 +182,20 @@ function doneButton(){
 
 function clearFeedback(){
   ansFeedback.innerText = ""
+}
+
+function disableLetter (e){
+  letterBox[e].classList.add("disable-it")
+}
+
+function enableLetter(){
+  const allLetters = letterContainer.children
+  for (i = 0; i < allLetters.length; i++){
+    allLetters[i].classList.remove("disable-it")
+  }
+}
+
+function disableAllButtons(){
+  submitButton.classList.add("disable-it")
+  resetButton.classList.add("disable-it")
 }
