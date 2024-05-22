@@ -129,7 +129,7 @@ function submitGuess(){
     if (possWords[i] == guessString.innerText){
       for (j = 0; j < usedWords.length; j++){
         if (usedWords[j] == guessString.innerText){
-          ansFeedback.innerText = "You used that word already CUH"
+          ansFeedback.innerText = "You used that word already!"
           return
         }
       }
@@ -146,7 +146,7 @@ function submitGuess(){
     } 
   }
   if (!nah == 1 ){
-    ansFeedback.innerText = "NAH"
+    ansFeedback.innerText = "Try a Different Word!"
   }
   return resetGuess()
 }
